@@ -4,30 +4,31 @@ const prefix = "!";
 
 client.on('ready', () => {
     console.log('I am ready!');
+    if (!message.content.startsWith(prefix)) return;
+ 
 });
-
-client.on('message', message => {
-    if (message.content === (prefix + "cmds") {
+ if (message.content.startsWith(prefix + "cmds")) {
     	message.reply("The commands Are :\n" +
 "!buy\n" +
 "!ping\n" +
 "!gae");
   	}
+
 });
 client.on('message', message => {
-    if (message.content === (prefix + "buy") {
+    if (message.content.startsWith(prefix + "buy") {
     	message.reply('https://selly.gg/p/fe31a887');
   	}
 });
 
 client.on('message', message => {
-    if (message.content === (prefix + "ping") {
+    if (message.content.startsWith(prefix + "ping") {
     	message.reply('Fuck off');
   	}
 });
 
 client.on('message', message => {
-    if (message.content === (prefix + "gea") {
+    if (message.content.startsWith(prefix + "gea") {
     	message.reply('Yea You are Gae');
   	}
 });
