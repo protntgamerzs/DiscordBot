@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'cmds') {
-    	message.reply('The commands are /n buy,ping and gea ');
+    	message.reply('The commands are /n -buy /n -ping /n -gae');
   	}
 });
 client.on('message', message => {
