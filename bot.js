@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
+    if (message.content === 'Buy') {
+    	message.reply('https://selly.gg/p/fe31a887');
   	}
 });
 
