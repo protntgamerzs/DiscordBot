@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 if (command === 'choose'){
-        message.author.send("spit, swallow or none?");
+        message.author.send("spit swallow?");
         const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         console.log(collector)
         collector.on('collect', message => {
@@ -14,9 +14,6 @@ if (command === 'choose'){
                 message.channel.send("YOU ARE GAE");
             } else if (message.content === "swallow") {
                 message.channel.send("YOU ARE VERY GAY");
-             else if (message.content === "none") {
-             }  message.channel.send("you are not gae");
-             }
             }
         })
 });
