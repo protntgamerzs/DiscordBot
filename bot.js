@@ -1,12 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = "!";
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
 client.on('message', message => {
-    if (message.content === 'cmds') {
+    if (message.content === (prefix + "cmds") {
     	message.reply("The commands Are :\n" +
 "buy\n" +
 "ping\n" +
@@ -14,19 +15,19 @@ client.on('message', message => {
   	}
 });
 client.on('message', message => {
-    if (message.content === 'buy') {
+    if (message.content === (prefix + "buy") {
     	message.reply('https://selly.gg/p/fe31a887');
   	}
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
+    if (message.content === (prefix + "ping") {
     	message.reply('Fuck off');
   	}
 });
 
 client.on('message', message => {
-    if (message.content === 'gea') {
+    if (message.content === (prefix + "gea") {
     	message.reply('Yea You are Gae');
   	}
 });
