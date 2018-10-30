@@ -6,7 +6,6 @@ client.on('ready', () => {
 });   
 
 client.on('message', message => {
-    if (message.content === "cmds") {
     if (message.content === 'cmds') {
     	message.reply("The Commands Are\n" +
 "buy\n" +
@@ -15,13 +14,11 @@ client.on('message', message => {
 });
  client.on('message', message => {
     if (message.content === 'buy') {
-    if (message.content === 'buy') {
     	message.reply("https://selly.gg/p/fe31a887");
   	}
 });
         
 client.on('message', message => {
-    if (message.content === 'gae') {
     if (message.content === 'gae') {
     	message.reply("You Are Gae");
   	}
