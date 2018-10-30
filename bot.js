@@ -13,7 +13,8 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === 'Buy') {
-    	message.reply('ProSploit Beta
+    	message.reply('
+ProSploit Beta
 Buy it here ---> https://selly.gg/p/fe31a887
 Supports:
   -Full lua execution
