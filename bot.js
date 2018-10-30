@@ -10,9 +10,9 @@ client.on('message', message => {
     	message.reply('ProSploit Beta
 Buy it here ---> https://selly.gg/p/fe31a887
 Supports:
-  -Full lua execution
-  -Getobjects/HttpGet
-  -fast injection');
+  Full lua execution
+  Getobjects/HttpGet
+  fast injection');
   	}
 });
 
