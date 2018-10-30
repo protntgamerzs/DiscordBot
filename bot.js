@@ -7,11 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'buy') {
-    	message.reply('ProSploit Beta Buy it here ---> https://selly.gg/p/fe31a887'
-                       'Supports:'
-                        'Full lua execution'
-                        'Getobjects/HttpGet'
-                        'fast injection');
+    	message.reply('pong'
   	}
 });
 
