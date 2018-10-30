@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'cmds') {
-    	message.reply("The Commands Are\n" +
+    	message.reply("\nThe Commands Are\n" +
 "buy\n" +
 "gae");
   	}
