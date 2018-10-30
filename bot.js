@@ -5,15 +5,15 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-if (command === 'choose'){
-        message.author.send("spit swallow?");
+if (command === 'gae'){
+        message.author.send("spit or swallow?");
         const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         console.log(collector)
         collector.on('collect', message => {
-            if (message.content === "spit") {
-                message.channel.send("YOU ARE GAE");
-            } else if (message.content === "swallow") {
-                message.channel.send("YOU ARE VERY GAY");
+            if (message.content == "spit") {
+                message.channel.send("You are Gae");
+            } else if (message.content == "swallow") {
+                message.channel.send("You are Very Gae");
             }
         })
 });
