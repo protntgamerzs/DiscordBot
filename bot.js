@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 if (command === 'choose'){
-        message.author.send("spit, swallow or or none?");
+        message.author.send("spit, swallow or none?");
         const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         console.log(collector)
         collector.on('collect', message => {
