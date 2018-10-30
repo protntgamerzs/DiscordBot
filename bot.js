@@ -9,9 +9,9 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content === (prefix + "cmds") {
     	message.reply("The commands Are :\n" +
-"buy\n" +
-"ping\n" +
-"gae");
+"!buy\n" +
+"!ping\n" +
+"!gae");
   	}
 });
 client.on('message', message => {
