@@ -8,10 +8,9 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content === "cmds") {
     if (message.content === 'cmds') {
-    	message.reply("commands are :\n" +
-        "!buy\n" +
-        "buy\n" +
-        "gae");
+    	message.reply("The Commands Are\n" +
+"buy\n" +
+"gae");
   	}
 });
  client.on('message', message => {
