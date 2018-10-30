@@ -6,7 +6,7 @@ client.on('ready', () => {
  
 });
  client.on('message', message => {
-    if (message.content ===("cmds") {
+    if (message.content ===("!cmds") {
     	message.reply("The commands Are :\n" +
 "!buy\n" +
 "!ping\n" +
@@ -15,19 +15,19 @@ client.on('ready', () => {
 
 });
 client.on('message', message => {
-    if (message.content ===("buy") {
+    if (message.content ===("!buy") {
     	message.reply('https://selly.gg/p/fe31a887');
   	}
 });
 
 client.on('message', message => {
-    if (message.content ===("ping") {
+    if (message.content ===("!ping") {
     	message.reply('Fuck off');
   	}
 });
 
 client.on('message', message => {
-    if (message.content ===("gea") {
+    if (message.content ===("!gea") {
     	message.reply('Yea You are Gae');
   	}
 });
