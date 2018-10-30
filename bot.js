@@ -5,10 +5,20 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
+if (command === 'spec'){
+        message.author.send("spit, swallow or or none?");
+        const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+        console.log(collector)
+        collector.on('collect', message => {
+            if (message.content === "spit") {
+                message.channel.send("YOU ARE GAE");
+            } else if (message.content === "swallow") {
+                message.channel.send("YOU ARE VERY GAY");
+             else if (message.content === "none") {
+             }  message.channel.send("you are not gae");
+             }
+            }
+        })
 });
 
 // THIS  MUST  BE  THIS  WAY
