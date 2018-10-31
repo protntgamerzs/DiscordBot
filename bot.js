@@ -8,19 +8,33 @@ bot.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
  
   if (message.content.startsWith(prefix + "info")) {
-    const info = new Discord.RichEmbed()
-    .setTitle("You can Buy ProSploit Here")
-    .setAuthor("ProSploit", "https://i.imgur.com/lm8s41J.png")
-    .setColor(0x00AE86)
-    .setFooter("Message From BotSploit", "http://i.imgur.com/CdYHQbi.png")
-    .setImage("http://i.imgur.com/CdYHQbi.png")                         
-    .setThumbnail("http://i.imgur.com/bZoA012.png") 
-    .setTimestamp()
-    .setURL("https://selly.gg/p/fe31a887")
-    .addBlankField(true)
-    .addField("Supports:",
-    "Full lua execution", "HttpGet", "Fast Injection")
- 
-  message.channel.send({info});
-}});
+    message.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "This is an embed",
+    url: "http://google.com",
+    description: "test.",
+    fields: [{
+        name: "Fields",
+        value: "test."
+      },
+      {
+        name: "Masked links",
+        value: "test."
+      },
+      {
+        name: "Markdown",
+        value: "test."
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Example"
+    }
+  }
+});
 bot.login(code); 
