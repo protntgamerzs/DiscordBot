@@ -15,13 +15,13 @@ bot.on("message", function(message) {
     var args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "!gae":
+        case "gae":
          message.channel.sendMessage("Ye We know you are Gae!");
          
 
          
 
-        case "!info":
+        case "info":
         const embed = new Discord.RichEmbed()
   .setTitle("You can Buy ProSploit Here")
   .setAuthor("ProSploit", "https://i.imgur.com/lm8s41J.png")
