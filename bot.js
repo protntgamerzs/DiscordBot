@@ -1,28 +1,42 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
 
-client.on('ready', () => {
-    console.log('I am ready!');
-});   
+var bot = new Discord.Client();
 
-client.on('message', message => {
-    if (message.content === 'cmds') {
-    	message.reply("\nThe Commands Are\n" +
-"buy\n" +
-"gae");
-  	}
+bot.on("ready", function() {
+    console.log("Ready");
+
 });
- client.on('message', message => {
-    if (message.content === 'buy') {
-    	message.reply("https://selly.gg/p/fe31a887");
-  	}
-});
-        
-client.on('message', message => {
-    if (message.content === 'gae') {
-    	message.reply("You Are Gae");
-  	}
-});        
 
-// THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (!message.content.startWith(PREFIX)) return;
+
+    var args = message.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0].toLowerCase()) {
+        case "!gae":
+         message.channel.sendMessage("Ye We know you are Gae!");
+
+         case "!buy":
+        var embed = new Discord.RichEmbed()
+        .addField("Buy the Exploit To click ---->", "https://selly.gg/p/fe31a887", true) 
+        .addField("It Supports:", "Full lua", "Getobject/Httpget","Fast Injection", true) 
+        .setColor(0xFFAB00)
+        message.channel.sendEmbed(embed);
+
+        case "!info":
+        var embed = new Discord.RichEmbed()
+        .addField("!gae", "an Awesome Command", true) 
+        .addField("!buy", "To buy the Product ProSploit", true) 
+        .setColor(0xFFAB00)
+        message.channel.sendEmbed(embed);
+        break;
+    default:
+        message.channel.sendMessage("Invalide Command! Sorry");
+
+    }
+    
+});
+
+bot.login(BOT_TOKEN);
