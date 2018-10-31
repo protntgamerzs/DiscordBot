@@ -15,4 +15,4 @@ bot.on("message", (message) => {
   }
 });
  
-bot.login(code);
+bot.login(BOT_TOKEN);
