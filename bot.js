@@ -23,4 +23,4 @@ bot.on("message", (message) => {
  
   message.channel.send({info});
 }});
-bot.login("NDUyNDYzMjUxNDk4ODYwNTk2.Drn6qA.yznePHjwvON9J5FtfVTpeCLCjfI"); 
+bot.login(code); 
