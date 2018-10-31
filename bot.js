@@ -19,18 +19,18 @@ bot.on("message", function(message) {
          message.channel.sendMessage("Ye We know you are Gae!");
 
          case "buy":
-        var embed = new Discord.RichEmbed()
+        var buy = new Discord.RichEmbed()
         .addField("Buy the Exploit To click ---->", "https://selly.gg/p/fe31a887", true) 
         .addField("It Supports:", "Full lua", "Getobject/Httpget","Fast Injection", true) 
         .setColor(0xFFAB00)
-        message.channel.sendEmbed(embed);
+        message.channel.sendEmbed(buy);
 
         case "info":
-        var embed = new Discord.RichEmbed()
+        var info = new Discord.RichEmbed()
         .addField("gae", "an Awesome Command", true) 
         .addField("buy", "To buy the Product ProSploit", true) 
         .setColor(0xFFAB00)
-        message.channel.sendEmbed(embed);
+        message.channel.sendEmbed(info);
         break;
     default:
         message.channel.sendMessage("Invalide Command! Sorry");
