@@ -15,17 +15,17 @@ bot.on("message", function(message) {
     var args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "!gae":
+        case "gae":
          message.channel.sendMessage("Ye We know you are Gae!");
 
-         case "!buy":
+         case "buy":
         var embed = new Discord.RichEmbed()
         .addField("Buy the Exploit To click ---->", "https://selly.gg/p/fe31a887", true) 
         .addField("It Supports:", "Full lua", "Getobject/Httpget","Fast Injection", true) 
         .setColor(0xFFAB00)
         message.channel.sendEmbed(embed);
 
-        case "!info":
+        case "info":
         var embed = new Discord.RichEmbed()
         .addField("!gae", "an Awesome Command", true) 
         .addField("!buy", "To buy the Product ProSploit", true) 
