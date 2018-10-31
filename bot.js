@@ -15,22 +15,25 @@ bot.on("message", function(message) {
     var args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "gae":
+        case "!gae":
          message.channel.sendMessage("Ye We know you are Gae!");
+         
 
-         case "buy":
-        var buy = new Discord.RichEmbed()
-        .addField("Buy the Exploit To click ---->", "https://selly.gg/p/fe31a887", true) 
-        .addField("It Supports:", "Full lua", "Getobject/Httpget","Fast Injection", true) 
-        .setColor(0xFFAB00)
-        message.channel.sendEmbed(buy);
+         
 
-        case "info":
-        var info = new Discord.RichEmbed()
-        .addField("gae", "an Awesome Command", true) 
-        .addField("buy", "To buy the Product ProSploit", true) 
-        .setColor(0xFFAB00)
-        message.channel.sendEmbed(info);
+        case "!info":
+        const embed = new Discord.RichEmbed()
+  .setTitle("You can Buy ProSploit Here")
+  .setAuthor("ProSploit", "https://i.imgur.com/lm8s41J.png")
+  .setColor(0x00AE86)
+  .setFooter("Message From BotSploit", "http://i.imgur.com/CdYHQbi.png")
+  .setImage("http://i.imgur.com/CdYHQbi.png")                         
+  .setThumbnail("http://i.imgur.com/bZoA012.png") 
+  .setTimestamp()
+  .setURL("https://selly.gg/p/fe31a887")
+  .addField("Supports:",
+    "Full lua execution", "HttpGet", "Fast Injection")
+  message.channel.send({embed});
         break;
     default:
         message.channel.sendMessage("Invalide Command! Sorry");
