@@ -27,8 +27,8 @@ bot.on("message", function(message) {
 
         case "info":
         var embed = new Discord.RichEmbed()
-        .addField("!gae", "an Awesome Command", true) 
-        .addField("!buy", "To buy the Product ProSploit", true) 
+        .addField("gae", "an Awesome Command", true) 
+        .addField("buy", "To buy the Product ProSploit", true) 
         .setColor(0xFFAB00)
         message.channel.sendEmbed(embed);
         break;
