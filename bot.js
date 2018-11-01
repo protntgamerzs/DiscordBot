@@ -12,16 +12,6 @@ Client.on("ready", () => {
 	Client.user.setPresence({ game: { name: `Hello world`, type: 0} });
 });
 
-// welcome message
-
-Client.on("guildMemberAdd", member => {
-   member.guild.defaultChannel.send("Welcome to: " + member.guild.name + " Hope you enjoy it here")
-});
-
-Client.on("guildMemberRemove", member => {
-   member.guild.defaultChannel.send("Goodbye: " + member.user.username + " from " + member.guild.name)
-});
-
 Client.on("message", async (message) => {
 	if (message.author.bot) return;
 	if (!message.content.startsWith(prefix)) return;
