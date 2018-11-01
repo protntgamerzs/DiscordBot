@@ -1,32 +1,17 @@
-const Discord = require('discord.js');
-const botConfig = require("/botconfig.json");
-const bot = new Discord.Client();
-
-bot.on("ready", async () => {
-
-	console.log(`${bot.user.username} Is Online!`);
-
-	bot.user.setActivity("with Gae", {type: "PLAYING"});
-	
-
-	//bot send message back
-	if (Message.author.bot) return;
-
-	if(Message.channel.type === "dm") return;
-
-	var prefix = botConfig.prefix;
-	
-	var messageArray = message.content.split("");
-
-	var command = messageArray[0];
-
-	var arguments = messageArray.slice(1);
-
-	if( command === `${prefix}Hi`){
-
-		return Message.Channel.send("Hey You are Gae");
-	
-	}	
-
+const Discord = require("discord.js");
+const client = new Discord.Client();
+ 
+// Set the prefix
+let prefix = "!";
+client.on("message", (message) => {
+  // Exit and stop if the prefix is not there or if user is a bot
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
+ 
+  if (message.content.startsWith(prefix + "gae")) {
+    message.channel.send("NO U");
+  } else
+  if (message.content.startsWith(prefix + "NO U")) {
+    message.channel.send("BRO YOU SUCK DICKS 24/7");
+  }
 });
-bot.login(BOT_TOKEN);
+client.login(BOT_TOKEN);
