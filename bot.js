@@ -3,7 +3,7 @@ const superagent = require("superagent");
 const Client = new Discord.Client();
 const OwnerID = "228066680268390400";
 
-const prefix = "8"
+const prefix = "/"
 
 
 
