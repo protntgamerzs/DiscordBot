@@ -7,22 +7,22 @@ const prefix = "!"
 
 
 
-Client.on("ready", () => {
+Client.on("ready", function() {}
 	console.log("online");
 	Client.user.setPresence({ game: { name: `Hello world`, type: 0} });
 });
 
 // welcome message
 
-Client.on("guildMemberAdd", member => {
+Client.on("guildMemberAdd", member function() {}
    member.guild.defaultChannel.send("Welcome to: " + member.guild.name + " Hope you enjoy it here")
 });
 
-Client.on("guildMemberRemove", member => {
+Client.on("guildMemberRemove", member function() {}
    member.guild.defaultChannel.send("Goodbye: " + member.user.username + " from " + member.guild.name)
 });
 
-Client.on("message", async (message) => {
+Client.on("message", async (message) function() {}
 	if (message.author.bot) return;
 	if (!message.content.startsWith(prefix)) return;
 	
@@ -58,7 +58,7 @@ Client.on("message", async (message) => {
 		const embed = new Discord.RichEmbed()
 		.setColor(0x954D23)
 		.setTitle("Synthex")
-  .setField("Supports:")
+                .setField("Supports:")
 		.addField("Full Lua Execution")
 		.addField("Loadstrings")
 		.addField("Fast injection")
