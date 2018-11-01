@@ -58,7 +58,7 @@ Client.on("message", async (message) function() {}
 		const embed = new Discord.RichEmbed()
 		.setColor(0x954D23)
 		.setTitle("Synthex")
-                .setField("Supports:")
+               .setField("Supports:")
 		.addField("Full Lua Execution")
 		.addField("Loadstrings")
 		.addField("Fast injection")
