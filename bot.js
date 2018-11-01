@@ -1,28 +1,28 @@
 const Discord = require('discord.js');
 const superagent = require("superagent");
 const Client = new Discord.Client();
-const OwnerID = "228066680268390400";
+const OwnerID = "130515926117253122";
 
 const prefix = "!"
 
 
 
-Client.on("ready", function() {}
+Client.on("ready", () => {
 	console.log("online");
 	Client.user.setPresence({ game: { name: `Hello world`, type: 0} });
 });
 
 // welcome message
 
-Client.on("guildMemberAdd", member function() {}
+Client.on("guildMemberAdd", member => {
    member.guild.defaultChannel.send("Welcome to: " + member.guild.name + " Hope you enjoy it here")
 });
 
-Client.on("guildMemberRemove", member function() {}
+Client.on("guildMemberRemove", member => {
    member.guild.defaultChannel.send("Goodbye: " + member.user.username + " from " + member.guild.name)
 });
 
-Client.on("message", async (message) function() {}
+Client.on("message", async (message) => {
 	if (message.author.bot) return;
 	if (!message.content.startsWith(prefix)) return;
 	
@@ -32,7 +32,7 @@ Client.on("message", async (message) function() {}
 	let args = message.content.split(" ").slice(1);
 	
 	if (command === "ping") {
-		message.channel.send(`Pong! Time took: ${Date.now() - message.createdTimestamp} ms`);
+		message.channel.send(`Gae! Time took: ${Date.now() - message.createdTimestamp} ms`);
 	} else
 
 	if (command === "say") {
@@ -50,23 +50,21 @@ Client.on("message", async (message) function() {}
 		.addField("!help", "Will give the current command list")
 		.addField("!ping", "WIll show the ping time for the bot")
 		.addField("!say [text]", "Will make the bot say something")
-  .addField("!buy", "To buy the exploit")
+		.addField("!buy", "To buy the exploit");
 		message.channel.send({embed})
 	} else
-  
-  if (command == "buy") {
+
+	if (command == "buy") {
 		const embed = new Discord.RichEmbed()
 		.setColor(0x954D23)
-		.setTitle("Synthex")
-               .setField("Supports:")
-		.addField("Full Lua Execution")
-		.addField("Loadstrings")
-		.addField("Fast injection")
+		.setTitle("ProSploit")
+		.addField("Supports:")
+		.addField("Full lua execution")
+		.addField("loadstrings")
+		.addField("fast injection");
 		message.channel.send({embed})
 	}
 
 });
 
-Client.login(BOT_TOKEN);
-
-
+Client.login("NDUyNDYzMjUxNDk4ODYwNTk2.DryfAQ.RJSU4B6bPhkzp06yA8eKxvJVGUA");
